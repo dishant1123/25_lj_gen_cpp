@@ -1,0 +1,40 @@
+cpp  / C++:
+
+c ==> procedure oriented languages .
+cpp ==> object oriented languages.
+=============================================
+
+#include<stdio.h>
+void main()
+{
+	printf("hello"); 
+	
+}
+===============================================
+
+print ===> cout 
+scan  ===> cin 
+
+=============================================
+with  using  namespace std;   ===> std ==> standard template ==> 
+=============================================
+#include<iostream>
+using  namespace std; 
+int main()
+{
+	cout<<"my name is ketan.";
+ 	return 0;
+} 
+=============================================
+with  out using namespace std;
+========================================
+
+#include<iostream>
+int main()
+{
+	std ::cout<<"my name is ketan.";
+	std ::cout<<"my name is ram.";
+	
+    return 0;
+} 
+
