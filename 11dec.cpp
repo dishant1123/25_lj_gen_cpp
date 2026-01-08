@@ -126,7 +126,7 @@ City 1 (Tier 1) → HRA = 0.30 × Basic Pay
 City 2 (Tier 2) → HRA = 0.20 × Basic Pay
 City 3 (Tier 3) → HRA = 0.10 × Basic Pay
 
-3.Annual Income = Gross Pay × 12
+3.Annual Income = Gross Pay × 12                                        ap = 1300000 
 
 4.
 | Annual Income           | Tax                                    |
@@ -139,4 +139,24 @@ City 3 (Tier 3) → HRA = 0.10 × Basic Pay
 | ₹12,50,001 – ₹15,00,000 | 25% of (Income – 12,50,000) + 1,25,000 |
 | Above ₹15,00,001        | 30% of (Income – 15,00,000) + 1,87,500 |
 
+*/
+/*
+hint  : 
+
+user grade : A 
+user  city  : 1  
+
+switch(grade) : 
+    case 'A' :
+        basicpay=60000; 
+        other =8000
+switch(city) :
+    case 1 : 
+        hra =0.30*basicpay; 
+dA =  
+grosspay =basicpay+HRA + other 
+annual income = grosspay*12
+
+cal tax : 
+if()
 */
