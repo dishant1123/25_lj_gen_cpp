@@ -142,4 +142,11 @@ ex : 175 :
     7 pow 2 =49
     5 pow 3 =125
     sum = 1 +49+125 =175 then it is disarium number . 
+
+hint  : 
+
+first digit : 175 /100 =1 
+second  digit : (175 /10)  %10 = 7  
+last digit : 175 %10 =5 
+sum = pow(firstdigit,1) + pow(seconddigit,2)  + pow(lastdigit,3)
 */
