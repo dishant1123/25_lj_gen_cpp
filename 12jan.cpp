@@ -70,4 +70,50 @@ int main()
     
 }
 */ 
+// pattern : 
+
+/*
+1.           2.             3.            4.         5.           6.      7. 
+*            * * * * *      1 2 3 4 5     * * * * *   * * * * *       *        *
+* *          * * * *        2 3 4 5         * * * *    * * * *      * *       * * 
+* * *        * * *          3 4 5             * * *     * * *     * * *      * * * 
+* * * *      * *            4 5                 * *      * *    * * * *     * * * *
+* * * * *    *              5                     *       *   * * * * *    * * * * *
+
+*/
+
+// 1 : 
+/*
+
+#include<iostream>
+using  namespace std;
+int main()
+{
+    int i , j; 
+    for(i=1; i<=5; i++)
+    {
+        for(j=1; j<=i; j++)
+        {
+            cout<<"*";
+        }
+        cout<<"\n";  // endl; 
+    }
+    return 0;
+}*/
+//2 : 
+#include<iostream>
+using  namespace std;
+int main()
+{
+    int i , j; 
+    for(i=1; i<=5; i++)
+    {
+        for(j=5; j>=i; j--)
+        {
+            cout<<"* ";
+        }
+        cout<<"\n";  // endl; 
+    }
+    return 0;
+}
 
