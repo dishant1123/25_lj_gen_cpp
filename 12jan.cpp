@@ -100,7 +100,8 @@ int main()
     }
     return 0;
 }*/
-//2 : 
+//2 :
+/* 
 #include<iostream>
 using  namespace std;
 int main()
@@ -116,4 +117,53 @@ int main()
     }
     return 0;
 }
+*/ 
 
+//3  : 
+/*
+
+#include<iostream>
+using  namespace std;
+int main()
+{
+    int i , j; 
+    for(i=1; i<=5; i++)
+    {
+        for(j=i; j<=5; j++)
+        {
+            cout<<j;
+        }
+        cout<<"\n";  // endl; 
+    }
+    return 0;
+}
+*/ 
+
+//4 :
+/*
+* * * * * 
+  * * * * 
+    * * * 
+      * *
+        *     
+*/
+
+#include<iostream>
+using  namespace std;
+int main()
+{
+    int i ,j,k; 
+    for(i=1; i<=5; i++)
+    {
+        for(k=1; k<i; k++)
+        {
+            cout<<"  ";
+        }
+        for(j=5; j>=i; j--)
+        {
+            cout<<" *";
+        }
+        cout<<"\n";  // endl; 
+    }
+    return 0;
+}
