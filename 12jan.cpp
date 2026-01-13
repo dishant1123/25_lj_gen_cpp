@@ -148,16 +148,97 @@ int main()
         *     
 */
 
+// #include<iostream>
+// using  namespace std;
+// int main()
+// {
+//     int i ,j,k; 
+//     for(i=1; i<=5; i++)
+//     {
+//         for(k=1; k<i; k++)
+//         {
+//             cout<<"  ";
+//         }
+//         for(j=5; j>=i; j--)
+//         {
+//             cout<<" *";
+//         }
+//         cout<<"\n";  // endl; 
+//     }
+//     return 0;
+// }
+
+// 6  
+/*
+         * 
+       * *
+     * * *
+   * * * *
+ * * * * *     
+*/
+// #include<iostream>
+// using  namespace std;
+// int main()
+// {
+//     int i ,j,k; 
+//     for(i=1; i<=5; i++)
+//     {
+//         for(k=5; k>i; k--)
+//         {
+//             cout<<"  ";
+//         }
+//         for(j=1; j<=i; j++)
+//         {
+//             cout<<" *";
+//         }
+//         cout<<"\n";  // endl; 
+//     }
+//     return 0;
+// }
+// 7 : 
+// #include<iostream>
+// using  namespace std;
+// int main()
+// {
+//     int i ,j,k; 
+//     for(i=1; i<=5; i++)
+//     {
+//         for(k=5; k>i; k--)
+//         {
+//             cout<<"  ";
+//         }
+//         for(j=1; j<=i; j++)
+//         {
+//             cout<<" *";
+//         }
+//         cout<<"\n";  // endl; 
+//     }
+//     return 0;
+// }
+
+
 #include<iostream>
 using  namespace std;
 int main()
 {
     int i ,j,k; 
+    for(i=1; i<=4; i++)
+    {
+        for(k=5; k>i; k--)
+        {
+            cout<<" ";
+        }
+        for(j=1; j<=i; j++)
+        {
+            cout<<" *";
+        }
+        cout<<"\n";  // endl; 
+    }
     for(i=1; i<=5; i++)
     {
         for(k=1; k<i; k++)
         {
-            cout<<"  ";
+            cout<<" ";
         }
         for(j=5; j>=i; j--)
         {
