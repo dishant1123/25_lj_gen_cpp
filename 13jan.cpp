@@ -146,3 +146,16 @@ int main()
 
 // hw : 1. insert 2. update 3. delete  4 remove duplicate  make  menu driven program. 
 
+/*
+task  :1 
+    ask user to enter the  array  and  find minimum element of array . 
+
+    input  : a[5] = {5,7,2,4,8}
+    minimum element is  : 2
+
+task  : 2 
+    ask user  to enter the array  and separate the pelindrome number from the array .
+
+    input  a[5] = {121,123,141,156,161}
+    output  : pelindrome number is  {121,141,161}
+*/
