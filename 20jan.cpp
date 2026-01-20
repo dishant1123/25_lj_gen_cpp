@@ -93,4 +93,32 @@ int main()
 1 st col =12 
 2 nd col =15
 3 rd col =18
+
 */
+
+/*
+task  :2  
+identity matrix  : 
+
+1 0 0  
+0 1 0 
+0 0 1  
+
+1 2 3 
+4 1 6 
+1 8 1 
+
+*/
+
+// hw : 
+/*
+menu driven  : 
+
+1. bubble  sort
+2. selection sort
+3. insertion sort
+4. remove duplicate
+5. exit 
+
+*/
+
