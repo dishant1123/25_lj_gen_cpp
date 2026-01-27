@@ -21,7 +21,7 @@ task   :1  user have max 3 attempt for  login.
 task   :2  if user  choose withdraw  then ask user to enter  pin and also verify the pin. 
 
 */
-
+/*
 #include <iostream>
 #include <string>
 using namespace std; 
@@ -122,3 +122,28 @@ int main()
     }while(choice !=4);
     return 0; 
 }
+*/
+
+// movie ticket booking system  ==> add movie ,ticket book ,search
+
+/*
+1. add movie  : id,name,available_seats,timings 
+2. ticket booking  : 
+            1. id , movie , seat , timing 
+            2. tickets : 
+                  gold :200 , sliver:400 , platinum:800 
+            3.  Total booking ticket :  
+                    id   : 101 
+                    movie : KGF
+                    timings : 10pm  
+                    total ticket : 3200 
+3. search movie : 
+            1. id :   101 
+4. display 
+
+example  : 
+
+id    name    available_seats    timings
+101   KGF       100               10pm ,10am 
+102   RRR       50                9pm, 9am  
+*/
