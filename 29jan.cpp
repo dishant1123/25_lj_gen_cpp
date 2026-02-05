@@ -159,3 +159,12 @@ int main()
     }while(choice !=5);
     return 0; 
 }
+/*
+for(int i = 0; i < 4; i++)  // 1  1 <4 
+    {
+    for(int j = 0; j < i; j++)  // 2   2 < 1 
+    {
+        cout << "*"; // 
+    }
+}
+*/
