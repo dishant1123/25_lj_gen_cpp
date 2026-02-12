@@ -58,7 +58,7 @@ int main()
 */ 
 
 // structure  with  pointer  : 
-
+/*
 #include <iostream>
 using  namespace std; 
 struct student 
@@ -80,4 +80,69 @@ int main()
     cout<<"roll no  : "<<q->roll<<endl;
     cout<<"name : "<<q->name<<endl;
     return 0; 
+}
+*/
+// ex :3  array  , structure  with  pointer 
+/*
+#include <iostream>
+using namespace std;
+struct  student
+{
+    string name; 
+    int id; 
+    int age; 
+};
+
+int main()
+{
+    student s[3]; 
+    student *p =s;
+    cout<<"enter the  student info : "<<endl;
+    for(int i=0; i<3; i++)
+    {
+        cin>>(p +i)->name; //    cin >> s[i].name  cin>>*(p +i) 
+        cin>>(p +i)->id;
+        cin>>(p +i)->age;
+    }
+
+    for(int i=0; i<3;i++)
+    {
+        cout<<"student name  : "<<(p+i)->name<<endl;
+        cout<<"student id : "<<(p+i)->id<<endl;
+        cout<<"student age : "<<(p+i)->age<<endl;
+    }
+
+    return 0; 
+}
+*/ 
+
+// ex : 4   double  pointer  : 
+
+/*
+    store pointer  to  pointer . 
+*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int  a=10; 
+    int *p; 
+    p = &a; 
+
+    int **q ;  // int  **q = &p; 
+    q= &p;
+    
+    //cout<<"value of a : "<<a<<endl;
+    //cout<<"value of p : "<<*p<<endl;
+    //cout<<"value of q : "<<**q<<endl;
+    
+    cout<<"address :"<<p<<endl; //  0x61ff0c  ==> a 
+    cout<<"address :"<<q<<endl; //  0x61ff08 ==> p 
+
+    cout<<"address :"<<&p<<endl; //  address :0x61ff08 ==> p 
+    cout<<"address :"<<&q<<endl; //  address :0x61ff04  ==> q 
+
+    return 0; 
+
 }
