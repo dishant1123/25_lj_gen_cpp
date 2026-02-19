@@ -94,7 +94,7 @@ if we don't use free(p) then memory  is  leaked.
 */
 
 // ex :3  dynamic memory allocation (in array)
-
+/*
 #include <iostream>
 using namespace std;
 int main()
@@ -127,3 +127,103 @@ int main()
     return 0; 
 
 }
+*/
+
+// emp manag system  : 
+/*
+1.add emp 
+2.update emp 
+3.delete emp 
+4.search emp 
+5.display emp
+*/
+
+#include <iostream>
+#include<string.h>
+#define max 100
+using namespace std;
+
+struct emp
+{
+    int  id; 
+    string name;
+    int salary;  
+};
+
+void add(struct emp *e ,int *count)
+{
+    if(*count >=max) 
+    {
+        cout<<"no space left"<<endl;
+        return; 
+    }
+    cout<<"enter the emp id : ";
+    cin>>e[*count].id; 
+    cout<<"enter the emp name : ";
+    cin>>e[*count].name;
+    cout<<"enter the emp salary : ";
+    cin>>e[*count].salary;
+
+    *(count)++; 
+    cout<<"emp added"<<endl;
+}
+
+void search(struct emp *e , int count)
+{
+    int id,found =0;
+    cout<<"enter the emp id to update : ";
+    cin>>id; 
+
+    for(int i=0; i<count; i++)
+    {
+        if(e[i].id ==id)
+        {
+            cout<<"enter the emp name : "<<e[i].name;
+            cout<<"enter the emp salary : "<<e[i].salary;
+            found =1 ;
+            break;
+        }
+    }
+    if(found ==0)
+    {
+        cout<<"emp not found"<<endl;
+    }
+}
+
+/*
+we use *count  beacuse we pass the address of count to modify the original variable 
+in main(). without pointer changes will not reflect outside the function. 
+*/
+
+// ex :1 
+/*
+#include <iostream>
+using namespace std;
+void  test(int  x)
+{
+    x++; 
+}
+int main()
+{
+    int  a=5; 
+    test(a); 
+    cout<<a<<endl;
+    return 0 ; 
+}
+// ex :2 
+
+#include <iostream>
+using namespace std;
+void  test(int  *x)
+{
+    *(x)++; 
+}
+
+int main()
+{
+    int  a=5; 
+    test(&a); 
+    cout<<a<<endl;
+    return 0 ; 
+}
+*/ 
