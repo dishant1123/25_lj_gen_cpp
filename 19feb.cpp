@@ -189,6 +189,31 @@ void search(struct emp *e , int count)
         cout<<"emp not found"<<endl;
     }
 }
+void delete_emp(struct emp *e ,int *count)
+{
+    int  id,found=0;
+    cout<<"enter the emp id to delete : ";
+    cin>>id; 
+    for(int i=0; i<*count; i++)
+    {
+        if(e[i].id ==id)
+        {      // shifting the elements to left
+                for(int j =i; j<*count-1; j++)
+                {
+                    e[j] = e[j+1];
+                }
+                *(count)--;
+                found =1;
+                cout<<"emp deleted"<<endl;
+                break;
+        } 
+    }
+    if(found ==0)
+    {
+        cout<<"emp not found"<<endl;
+    }
+
+}
 
 /*
 we use *count  beacuse we pass the address of count to modify the original variable 
@@ -227,3 +252,16 @@ int main()
     return 0 ; 
 }
 */ 
+
+#include<iostream>
+using namespace std;
+
+union U {
+    int i;
+    char c[5];
+};
+int main()
+{
+    cout << sizeof(U);
+    return 0; 
+}
