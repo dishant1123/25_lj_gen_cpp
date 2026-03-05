@@ -142,6 +142,7 @@ int main()
 */
 
 //bank  : 
+/*
 #include <iostream>
 using namespace std;
 class bank 
@@ -192,7 +193,103 @@ int main()
     b1.check_balance(); 
     return 0; 
 }
+*/
 /*
 task  :1 generate  pin  
 deposit  and  withdraw ==> verify pin  
+*/
+
+// constructor  : automatically called when object is created
+/*
+1. no return type. 
+2. class name =constructor name 
+type  : 
+
+1. default constructor
+2. parameterized constructor
+3. non parameterized constructor
+4. copy constructor
+5. constructor overloading
+*/
+
+// ex :1 default constructor
+/*
+#include <iostream>
+using namespace std;
+class student 
+{
+    public : 
+        student()
+        {
+            cout<<"default constructor called"<<endl;
+        }
+};
+int main()
+{
+    student s1; 
+    return 0;
+}
+*/ 
+
+// ex :2 non  parameterized constructor
+/*
+#include <iostream>
+using namespace std;
+class student 
+{
+    public : 
+        int rollno; 
+        string name; 
+        student()
+        {
+            name ="ram"; 
+            rollno=1;
+            cout<<"non parameterized constructor called"<<endl;
+        }
+        void show()
+        {
+            cout<<"rollno is  : "<<rollno<<endl;
+            cout<<"name is : "<<name<<endl;
+        }
+};
+int main()
+{
+    student s1; 
+    s1.show(); 
+    return 0;
+}
+*/ 
+// ex :3 parameterized constructor
+
+#include <iostream>
+using namespace std;
+class student 
+{
+    public : 
+        int rollno; 
+        string name; 
+    student(int  r ,string n) 
+    {
+        rollno=r;
+        name=n;
+        cout<<"parameterized constructor called"<<endl;
+    }
+    void show()
+    {
+        cout<<"rollno is  : "<<rollno<<endl;
+        cout<<"name is : "<<name<<endl;
+    }
+};
+int main()
+{
+    student s1(1,"ram");
+    s1.show(); 
+    return 0;
+}
+
+/*
+task  :2 above  program using  constructor  
+1. login 
+2. password 
+3. menudriven 
 */
