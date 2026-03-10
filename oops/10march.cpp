@@ -68,7 +68,7 @@ class b : public a     ===> b ==>a
 class c : public b    ===> c ==>a,b 
 
 */
-
+/*
 #include <iostream>
 using  namespace std;
 class employees 
@@ -129,3 +129,83 @@ int main()
 
     return 0; 
 }
+*/ 
+
+// ex :3  using  array  : 
+
+
+#include <iostream>
+using namespace std;
+class person 
+{
+    protected : 
+        string  name ; 
+    public : 
+        person()
+        {
+            cout<<"enter the name :"; 
+            cin>>name; 
+        }
+};
+class student : public person
+{
+    protected : 
+        int rollno; 
+        int  marks[5]; 
+    public : 
+        student()
+        {
+            cout<<"enter the roll no :";
+            cin>>rollno;
+
+            cout<<"enter the marks  of  5 subjects:";
+            for(int i=0; i<5; i++)
+            {
+                cin>>marks[i];
+            }
+        }
+};
+
+class result : public student
+{
+    private : 
+        int total =0; 
+        float avg; 
+    public : 
+        result()
+        {
+            for(int i=0; i<5; i++)
+            {
+                total+=marks[i];
+            }
+            avg =(float)total/5;
+        }
+        void display()
+        {
+            cout<<"student name is "<<name<<endl;
+            cout<<"roll no is "<<rollno<<endl;
+
+            cout<<"total marks are :";
+
+            for(int i=0; i<5; i++)
+            {
+                cout<<marks[i]<<" ";
+            }
+            cout<<"Total marks are :"<<total<<endl;
+            cout<<"average marks are :"<<avg<<endl;
+        }
+}; 
+
+int main()
+{
+    result r1; 
+    r1.display();
+    return 0; 
+}
+
+/*
+grade system :  avg  > 90  ==> a+  80 ==> b  70  ==> c 
+min  marks  ==> 
+max marks ==> 
+
+*/
