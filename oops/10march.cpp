@@ -133,7 +133,6 @@ int main()
 
 // ex :3  using  array  : 
 
-
 #include <iostream>
 using namespace std;
 class person 
