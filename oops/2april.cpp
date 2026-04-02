@@ -94,7 +94,7 @@ class c : public a, public b             class c : public b   == >c ==>a,b
 */
 
 // multiple level inheritance  : 
-
+/*
 #include <iostream>
 using namespace std;
 class student 
@@ -145,5 +145,98 @@ int main()
     c1.show();
     return 0; 
 }
-
+*/ 
 // ex :4 multi level inheritance    emp  , manager , ceo 
+
+// ex :5 hireachical inheritance
+/*
+
+class a 
+class b : public a   
+class c : public a
+class d : public a
+*/
+/*
+#include <iostream>
+using namespace std;
+class vehicle 
+{
+    public : 
+        string name ;
+    vehicle(string n)
+    {
+        name =n; 
+    }
+};
+class car : public vehicle
+{
+    private : 
+        string model ; 
+    public : 
+        int year; 
+
+    car (string model, int year,string n) :vehicle(n)
+    {
+        this->model =model;
+        this->year =year;
+    }
+    void show()
+    {
+        cout<<"name : "<<name<<endl;
+        cout<<"car model : "<<model<<endl;
+        cout<<"car year : "<<year<<endl;
+    }
+};
+class bike : public vehicle
+{
+    private : 
+        string model; 
+    public : 
+        int year;
+    bike(string model, int year,string n) :vehicle(n)
+    {
+        this->model =model;
+        this->year =year;
+    }
+    void show()
+    {
+        cout<<"name : "<<name<<endl;
+        cout<<"bike model : "<<model<<endl;
+        cout<<"bike year : "<<year<<endl;
+    }
+};
+int main()
+{
+    car c1("audi-Q3",2012,"4 wheeler");
+    c1.show();
+
+    bike b1("Royal_enfield",2012,"2 wheeler");
+    b1.show();
+
+    return 0;
+}
+
+*/ 
+
+// ex :6 hybrid inheritance
+/*
+its  combination  of  multiple  inheritance  and  multilevel inheritance. 
+
+class a :                                class a 
+class b :                                class b : public a  ==> b ==>a 
+class c : public a, public b             class c : public b   == >c ==>a,b 
+
+class a 
+class b : public a 
+class c : public a 
+class d : public b , public c
+
+           person 
+           /    \
+          emp   marks 
+           \    / 
+            result   
+
+
+*/
+
