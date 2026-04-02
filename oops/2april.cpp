@@ -1,0 +1,149 @@
+/*
+inheritance : to  inherit properites and  methods from  parents class .
+
+1. single level inheritance  
+2. multiple level inheritance
+3. multiple inheritance
+4. hiechical inheritance
+5. hybrid inheritance  ==> virtual inheritance ==> diamond problem
+
+*/
+
+// ex :1 single level inheritance
+/*
+#include<iostream>
+using namespace std;
+class student   // base class 
+{
+    public : 
+        int rollno =1; 
+        string name ="nirmit";
+
+};
+class teacher : public student  // derived class
+{
+    public : 
+        void  show()
+        {
+            cout<<"student rollno is  : "<<rollno<<endl;
+            cout<<"student name is : "<<name<<endl;
+        }
+};
+int main()
+{
+    teacher t1; 
+    t1.show(); 
+    return 0;
+}
+*/ 
+
+// ex :2 using constructor  : 
+/*
+#include<iostream>
+using namespace std;
+class student 
+{
+    public : 
+        int rollno; 
+        string name;
+    // student(int r, string n)
+    // {
+    //     rollno =r;
+    //     name =n; 
+    // }
+    student()
+    {
+        rollno =1; 
+        name ="nirmit";
+    }
+};
+class teacher : public student
+{
+    public :
+        string subject; 
+    // teacher(string s,int r, string n):student(r,n) // base class constructor called
+    // {
+    //     subject =s;
+    // }
+    teacher(string s)
+    {
+        subject =s;
+    } 
+    void show()
+    {
+        cout<<"student rollno is  : "<<rollno<<endl;
+        cout<<"student name is : "<<name<<endl;
+        cout<<"teacher subject is : "<<subject<<endl;
+    }
+};
+int main()
+{
+    // teacher t1("python",1,"nirmit");
+    teacher t1("python");
+    t1.show(); 
+    return 0; 
+}
+*/
+
+// ex :3 multiple level inheritance  vs  multi level 
+
+/*
+class a :                                class a 
+class b :                                class b : public a  ==> b ==>a 
+class c : public a, public b             class c : public b   == >c ==>a,b 
+*/
+
+// multiple level inheritance  : 
+
+#include <iostream>
+using namespace std;
+class student 
+{
+    private : 
+        int age; 
+    public : 
+        string  name; 
+    student(int a, string n)
+    {
+        age =a; 
+        name =n;
+    }
+    void display_age()
+    {
+        cout<<"age is  : "<<age<<endl;
+    }
+};
+class professor 
+{
+    public : 
+        string dept;
+    professor(string d)
+    {
+        dept =d;
+    }
+};
+class clg : public student ,public professor
+{
+    public : 
+        string clg_name; 
+    clg(string c_n,int a, string n,string d):student(a,n),professor(d)
+    {
+        clg_name =c_n;
+    }
+    void show()
+    {
+        cout<<"clg name is  : "<<clg_name<<endl;
+        cout<<"name is  : "<<name<<endl;
+        display_age();  // student ::display_age();
+        cout<<"dept is  : "<<dept<<endl;
+        
+    }
+};
+int main()
+{
+    clg c1("New_lJ",20,"nirmit","Research");
+    c1.show();
+    return 0; 
+}
+
+// ex :4 multi level inheritance    emp  , manager , ceo 
