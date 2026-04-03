@@ -240,7 +240,7 @@ class d : public b , public c
 
 */
 // hybrid inheritance  : without using virtual inheritance 
-
+/*
 #include <iostream>
 using namespace std;
 class person 
@@ -290,6 +290,87 @@ class result : public student , public teacher
         int marks; 
     public : 
         result(string n, int a, int r , string s,int m): student(n,a,r),teacher(n,a,s)
+        {
+            marks =m;
+            cout<<"result constructor called"<<endl;
+        }
+        void  result_show()
+        {
+            cout<<"===============result==============="<<endl;
+            student::person_show(); 
+            cout<<"student rollno is  : "<<rollno<<endl;
+            cout<<"subject is  : "<<subject<<endl;
+            cout<<"marks is  : "<<marks<<endl;
+
+        }
+};
+int main()
+{
+    result r1("nirmit",23,1,"python",90);
+    r1.result_show();
+    return 0 ;
+}
+
+*/ 
+
+// virtual inheritance :
+/*
+1. virtual function  : ==> run time polymorphism
+2. virtual inheritance  : ==> diamond problem solve  
+
+*/
+
+// virtual inheritance :
+
+#include <iostream>
+using namespace std;
+class person 
+{
+    protected : 
+        string name ; 
+    private : 
+        int age; 
+    public : 
+        person(string n="", int a=0)
+        {
+            name =n;
+            age =a;
+            cout<<"person constructor called"<<endl;
+        }
+        void  person_show()
+        {
+            cout<<"person name is  : "<<name<<endl;
+            cout<<"person age is  : "<<age<<endl;
+        }
+};
+class student : virtual public person 
+{
+    protected : 
+        int rollno ; 
+    public : 
+        student(int r=0)
+        {
+            rollno =r; 
+            cout<<"student constructor called"<<endl;
+        }
+};
+class teacher : virtual public person
+{
+    protected :
+        string subject ;
+    public : 
+        teacher(string s="")
+        {
+            subject =s;
+            cout<<"teacher constructor called"<<endl;
+        }
+};
+class result : public student , public teacher
+{
+    private : 
+        int marks; 
+    public : 
+        result(string n, int a, int r , string s,int m): student(r),teacher(s),person(n,a)
         {
             marks =m;
             cout<<"result constructor called"<<endl;
