@@ -83,7 +83,7 @@ int  main()
     return 0;
 }
 */
-
+/*
 #include<iostream>
 using namespace std;
 class student 
@@ -127,3 +127,81 @@ int  main()
     t1.show();
     return 0; 
 }
+*/
+
+// ex :3 multiple  inheritance : 
+
+/*
+class a  
+class b 
+class c : public a , public b 
+*/
+#include<iostream>
+using namespace std;
+class student 
+{
+    private : 
+        int age; 
+    public : 
+        string  name ;
+    student(int a, string n)
+    {
+        age =a;
+        name =n;
+    }
+    void age_show()
+    {
+        cout<<"age  :"<<age<<endl;
+    }
+};
+class teacher 
+{
+    protected : 
+        string subject ;
+    public : 
+        string t_name; 
+    teacher(string s,string t_n)
+    {
+        subject =s;
+        t_name =t_n;
+    }
+
+};
+class clg : public student , public teacher
+{
+    public :
+        string  clg_name; 
+    clg(int a, string n,string s,string t_n,string c_n):student(a,n),teacher(s,t_n)
+    {
+        clg_name =c_n;
+    }
+    void  show()
+    {
+        cout<<"Clg name  :"<<clg_name<<endl;
+        cout<<"name  :"<<name<<endl;
+        age_show();
+        cout<<"teacher name : "<<t_name<<endl;
+        cout<<"subject  :"<<subject<<endl;
+
+
+    }
+};
+
+int  main()
+{
+    clg c1(23,"ram","python","prof.vyas","LJ"); 
+    c1.show();
+    return 0; 
+}
+
+// multi level inheritance :
+
+/*
+class a  
+class b : public a   ==> b ==> a
+class c : public b  ==> c ==> a,b
+
+class employees 
+class manager : public employees
+class ceo : public manager 
+*/
