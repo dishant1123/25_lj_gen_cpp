@@ -134,6 +134,8 @@ int  main()
     string name;
     int accno;
     int balance;
+    bank *b; 
+
 
     do{
             cout<<"BANK MENU"<<endl;
@@ -151,31 +153,38 @@ int  main()
                 cout<<"enter balance : ";
                 cin>>balance;
             }
-            bank *b; 
             switch(choice)
             {
                 case 1 :
-                 
+                {
                     saving s(name, accno, balance);
                     b= &s; 
                     b->display(); 
                     b->calculation_int();
                     break;
-
+                }    
                 case 2 : 
+                {
                     fixdeposit f(name, accno, balance);
                     b= &f;
                     b->display();
                     b->calculation_int();
                     break;
-                case 3 : 
+                }
+                case 3 :
+                {
+
                     cout<<"bye"<<endl;
                     break;
-                default : 
+                }
+                default :
+                { 
                     cout<<"wrong choice"<<endl;
                     break;
+                }
             }
 
-    }while(choice !=3);
+    }
+    while(choice !=3);
     return 0; 
 }
