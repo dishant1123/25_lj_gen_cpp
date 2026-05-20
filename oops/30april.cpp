@@ -136,7 +136,6 @@ int  main()
     int balance;
     bank *b; 
 
-
     do{
             cout<<"BANK MENU"<<endl;
             cout<<"1. saving"<<endl;
